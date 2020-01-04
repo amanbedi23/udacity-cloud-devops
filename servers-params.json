@@ -20,7 +20,7 @@
     "ParameterValue": "s3://udacity-s3/devops/udacity.zip"
   },
   {
-    "ParameterKey": "KeyPairName",
-    "ParameterValue": "udacity-cloud-pem"
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t3.medium"
   }
 ]
