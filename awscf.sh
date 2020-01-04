@@ -19,12 +19,12 @@ fi
 
 
 ##### validate the template and parameters
-aws2 cloudformation validate-template --template-body file://$template > /dev/null 2>&1
+aws cloudformation validate-template --template-body file://$template > /dev/null 2>&1
 
 if [ $? -gt 0 ]
 then
     # show the error (which means running the validate again)
-    aws2 cloudformation validate-template --template-body file://$template
+    aws cloudformation validate-template --template-body file://$template
     exit 1
 else
     echo
@@ -33,7 +33,7 @@ fi
 
 
 ##### check if stack exists
-aws2 cloudformation describe-stacks --stack-name $stack_name > /dev/null 2>&1
+aws cloudformation describe-stacks --stack-name $stack_name > /dev/null 2>&1
 response=$?
 if [ $response -eq 255 ]
 then
@@ -52,7 +52,7 @@ fi
 
 
 ##### execute aws cloudformation command
-aws2 cloudformation $cfn_cmd \
+aws cloudformation $cfn_cmd \
 --stack-name $stack_name \
 --template-body file://$template \
 --parameters file://$parameters \
