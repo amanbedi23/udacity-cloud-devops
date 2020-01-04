@@ -1,4 +1,4 @@
-# udacity-cloud-devops
+# Udacity Project - Deploy a high-availability web app using CloudFormation
 
 ### Detailed Infrastructure Architecture
 
