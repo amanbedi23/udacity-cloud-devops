@@ -28,7 +28,7 @@ Parameters:
   KeyPairName:
     Description: Name of key-pair (PEM) file.
     Type: String
-    Default: 'udacity-dev-ops'
+    Default: 'udacity-cloud-pem'
 
 
 Resources:
